@@ -1,0 +1,39 @@
+version: 0.1
+log:
+  fields:
+    service: registry
+storage:
+  s3:
+      accesskey: $S3_ACCESSKEY
+      secretkey: $S3_ACCESSSECRET
+      region: eu-central-1
+      bucket: agilesoftware.ninja.docker.registry
+      encrypt: true
+      secure: true
+      v4auth: true
+      chunksize: 5242880
+      rootdirectory: /registry
+auth:
+  htpasswd:
+    realm: basic-realm
+    path: /auth/htpasswd
+http:
+  addr: docker.agilesoftware.ninja
+  host: https://docker.agilesoftware.ninja
+  tls:
+    certificate: /certs/fullchain.pem
+    key: /certs/privkey.pem
+  headers:
+    X-Content-Type-Options: [nosniff]
+redis:
+  addr: redis:6379
+health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3
+  tcp:
+    - addr: redis:6379
+      timeout: 3s
+      interval: 10s
+      threshold: 3
