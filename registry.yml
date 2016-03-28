@@ -18,7 +18,7 @@ auth:
     realm: basic-realm
     path: /auth/htpasswd
 http:
-  addr: docker.agilesoftware.ninja
+  addr: :5000
   host: https://docker.agilesoftware.ninja
   secret: ${REGISTRY_SECRET}
   tls:
