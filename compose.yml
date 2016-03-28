@@ -4,7 +4,7 @@ registry:
   restart: always
   image: registry:2
   ports:
-    - 80:5000
+    - 443:5000
   volumes:
     - ./registry-config.yml:/etc/docker/registry/config.yml
     - ${CERTS_PATH}:/certs
