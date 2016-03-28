@@ -22,8 +22,8 @@ http:
   host: https://docker.agilesoftware.ninja
   secret: ${REGISTRY_SECRET}
   tls:
-    certificate: /certs/fullchain.pem
-    key: /certs/privkey.pem
+    certificate: /certs/fullchain1.pem
+    key: /certs/privkey1.pem
   headers:
     X-Content-Type-Options: [nosniff]
 redis:
