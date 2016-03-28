@@ -4,7 +4,17 @@ The repository contains configuration files necessary to run a standalone docker
 
 ## Prerequisites
 
+### Docker and docker compose
+
 You should install [docker](https://docs.docker.com/engine/installation/) and [docker-compose](https://docs.docker.com/compose/install/) before going any further.
+
+### SSL certificates
+
+I recommend using [letsencrypt](https://letsencrypt.org/) to obtain valid and free SSL certificates for the registry.
+
+### Amazon
+
+You need to create and properly configure (policies/users) an S3 bucket. If you want to run the registry on Amazon EC2, you will also need a running instance and an appropriate DNS entries in Route 53.
 
 ## Repository content
 
