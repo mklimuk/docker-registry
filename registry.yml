@@ -20,6 +20,7 @@ auth:
 http:
   addr: docker.agilesoftware.ninja
   host: https://docker.agilesoftware.ninja
+  secret: ${REGISTRY_SECRET}
   tls:
     certificate: /certs/fullchain.pem
     key: /certs/privkey.pem
