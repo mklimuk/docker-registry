@@ -6,8 +6,8 @@ registry:
   ports:
     - 80:5000
   volumes:
-    - ./docker-registry.yml:/etc/docker/registry/config.yml
-    - $CERTS_PATH:/certs
-    - $AUTH_PATH:/auth
+    - ./registry-config.yml:/etc/docker/registry/config.yml
+    - ${CERTS_PATH}:/certs
+    - ${AUTH_PATH}:/auth
   links:
     - redis:redis

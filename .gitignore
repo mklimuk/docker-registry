@@ -1,2 +1,2 @@
-docker-registry.yml
+registry-config.yml
 docker-compose.yml
